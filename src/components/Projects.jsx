@@ -55,6 +55,7 @@ const PROJECTS = [
       'Smooth Animations',
     ],
     technologies: ['React.js', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://venkatesh-portfolio-two.vercel.app/',
   },
 ];
 

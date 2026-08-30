@@ -6,7 +6,7 @@ achievements, and professional links.
 
 ## 🌐 Live Portfolio
 
-Coming soon — deployed on Vercel.
+[Visit My Portfolio](https://venkatesh-portfolio-two.vercel.app/)
 
 ## 👨‍💻 About Me
 
