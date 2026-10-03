@@ -74,7 +74,7 @@ const PROJECTS = [
     '8. Contact / Recovery',
   ],
   technologies: ['React.js', 'FastAPI', 'Python', 'SQLite', 'AI/ML'],
-  liveUrl: 'https://ai-powered-lost-and-found-frontend.vercel.app/',
+  liveUrl: 'https://ai-powered-lost-and-found-system.vercel.app/',
   githubUrl:
     'https://github.com/VenkateshRachapothu/ai-powered-lost-and-found-system',
 },
