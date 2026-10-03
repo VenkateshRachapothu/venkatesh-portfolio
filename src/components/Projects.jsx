@@ -1,6 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Clock, CheckCircle2, Bot, Layers, Sparkles, Check, Workflow } from 'lucide-react';
+import {
+  ExternalLink,
+  Clock,
+  CheckCircle2,
+  Bot,
+  Layers,
+  Sparkles,
+  Check,
+  Workflow,
+} from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 const PROJECTS = [
@@ -17,8 +26,16 @@ const PROJECTS = [
       'Decision Agent',
       'Shared Workflow State',
     ],
-    technologies: ['Python', 'FastAPI', 'LangGraph', 'LangChain', 'LLMs', 'AI Agents'],
+    technologies: [
+      'Python',
+      'FastAPI',
+      'LangGraph',
+      'LangChain',
+      'LLMs',
+      'AI Agents',
+    ],
   },
+
   {
     name: 'Smart Interview Coach',
     status: 'Completed',
@@ -37,8 +54,10 @@ const PROJECTS = [
     ],
     technologies: ['React.js', 'FastAPI', 'Python', 'Groq', 'LLM'],
     liveUrl: 'https://smart-interview-coach-final.vercel.app/',
-    githubUrl: 'https://github.com/VenkateshRachapothu/smart-interview-coach-final',
+    githubUrl:
+      'https://github.com/VenkateshRachapothu/smart-interview-coach-final',
   },
+
   {
     name: 'Personal Portfolio Website',
     status: 'Completed',
@@ -57,42 +76,49 @@ const PROJECTS = [
     technologies: ['React.js', 'Tailwind CSS', 'Framer Motion'],
     liveUrl: 'https://venkatesh-portfolio-two.vercel.app/',
   },
+
   {
-  name: 'AI-Powered Lost and Found System',
-  status: 'Completed',
-  isMain: false,
-  description:
-    'AI-powered platform that helps users report lost and found items, automatically matches related reports using intelligent similarity analysis, and provides match results to help users recover lost belongings.',
-  workflowSteps: [
-    '1. User Registration / Login',
-    '2. Report Lost Item',
-    '3. Report Found Item',
-    '4. Item Details Analysis',
-    '5. AI Similarity Matching',
-    '6. Match Score Generation',
-    '7. Matching Results',
-    '8. Contact / Recovery',
-  ],
-  technologies: ['React.js', 'FastAPI', 'Python', 'SQLite', 'AI/ML'],
-  liveUrl: 'https://ai-powered-lost-and-found-system.vercel.app/',
-  githubUrl:
-    'https://github.com/VenkateshRachapothu/ai-powered-lost-and-found-system',
-},
+    name: 'AI-Powered Lost and Found System',
+    status: 'Completed',
+    isMain: false,
+    description:
+      'AI-powered platform that helps users report lost and found items, automatically matches related reports using intelligent similarity analysis, and provides match results to help users recover lost belongings.',
+    workflowSteps: [
+      '1. User Registration / Login',
+      '2. Report Lost Item',
+      '3. Report Found Item',
+      '4. Item Details Analysis',
+      '5. AI Similarity Matching',
+      '6. Match Score Generation',
+      '7. Matching Results',
+      '8. Contact / Recovery',
+    ],
+    technologies: ['React.js', 'FastAPI', 'Python', 'SQLite', 'AI/ML'],
+    liveUrl:
+      'https://ai-powered-lost-and-found-system.vercel.app/',
+    githubUrl:
+      'https://github.com/VenkateshRachapothu/ai-powered-lost-and-found-system',
+  },
 ];
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-24 border-t border-slate-800/40">
+    <section
+      id="projects"
+      className="py-24 border-t border-slate-800/40"
+    >
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">
             Portfolio
           </span>
+
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Things I've built
           </h2>
+
           <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto" />
         </div>
 
@@ -100,6 +126,7 @@ export const Projects = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {PROJECTS.map((project, index) => {
             const isInProgress = project.status === 'In Progress';
+
             return (
               <motion.div
                 key={project.name}
@@ -111,7 +138,10 @@ export const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
               >
                 {/* Top Accent Line */}
                 <div
@@ -126,7 +156,8 @@ export const Projects = () => {
 
                 <div className="flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    {/* Header Row: Title + Status */}
+
+                    {/* Header Row */}
                     <div className="flex items-start justify-between gap-3 mb-4">
                       <div>
                         {project.isMain && (
@@ -135,6 +166,7 @@ export const Projects = () => {
                             <span>Main Project</span>
                           </div>
                         )}
+
                         <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors">
                           {project.name}
                         </h3>
@@ -152,6 +184,7 @@ export const Projects = () => {
                         ) : (
                           <CheckCircle2 className="w-3.5 h-3.5" />
                         )}
+
                         <span>{project.status}</span>
                       </span>
                     </div>
@@ -161,13 +194,14 @@ export const Projects = () => {
                       {project.description}
                     </p>
 
-                    {/* 1. AI Agent Concepts */}
+                    {/* AI Agent Concepts */}
                     {project.agentConcepts && (
                       <div className="mb-6 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
                         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-3">
                           <Bot className="w-4 h-4" />
                           <span>AI Agent Concepts</span>
                         </div>
+
                         <div className="flex flex-wrap gap-1.5">
                           {project.agentConcepts.map((concept) => (
                             <span
@@ -182,13 +216,14 @@ export const Projects = () => {
                       </div>
                     )}
 
-                    {/* 2. Key Features / Workflow Steps (Smart Interview Coach) */}
+                    {/* Workflow Steps */}
                     {project.workflowSteps && (
                       <div className="mb-6 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
                         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-3">
                           <Workflow className="w-4 h-4" />
                           <span>Key Features & AI Workflow</span>
                         </div>
+
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {project.workflowSteps.map((step) => (
                             <div
@@ -203,13 +238,14 @@ export const Projects = () => {
                       </div>
                     )}
 
-                    {/* 3. Key Features (Personal Portfolio) */}
+                    {/* Key Features */}
                     {project.keyFeatures && (
                       <div className="mb-6 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
                         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-3">
                           <Sparkles className="w-4 h-4" />
                           <span>Key Features</span>
                         </div>
+
                         <div className="flex flex-wrap gap-1.5">
                           {project.keyFeatures.map((feat) => (
                             <span
@@ -226,8 +262,9 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                {/* Footer: Tech Stack + Links */}
+                {/* Footer */}
                 <div className="space-y-4 pt-4 border-t border-slate-800/40 mt-auto">
+
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -243,11 +280,13 @@ export const Projects = () => {
                   {/* Action Buttons */}
                   {(project.liveUrl || project.githubUrl) && (
                     <div className="flex items-center gap-3 pt-2">
+
+                      {/* Live Project */}
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all shadow-md active:scale-95 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
                         >
                           <span>Live Project</span>
@@ -255,17 +294,19 @@ export const Projects = () => {
                         </a>
                       )}
 
+                      {/* GitHub */}
                       {project.githubUrl && (
                         <a
                           href={project.githubUrl}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-semibold text-slate-200 bg-slate-900 border border-slate-700 rounded-lg hover:bg-slate-800 hover:text-white transition-all active:scale-95 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
                         >
                           <GithubIcon className="w-4 h-4" />
                           <span>GitHub</span>
                         </a>
                       )}
+
                     </div>
                   )}
                 </div>
@@ -273,7 +314,6 @@ export const Projects = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );
