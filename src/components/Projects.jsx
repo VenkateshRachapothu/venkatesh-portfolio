@@ -6,7 +6,7 @@ import { GithubIcon } from './Icons';
 const PROJECTS = [
   {
     name: 'Enterprise Workflow Automation Platform',
-    status: 'In Progress',
+    status: 'Completed',
     isMain: true,
     description:
       'AI-agent-based workflow automation platform designed to coordinate planning, research, analysis, and decision-making across complex multi-step business workflows.',
@@ -57,6 +57,27 @@ const PROJECTS = [
     technologies: ['React.js', 'Tailwind CSS', 'Framer Motion'],
     liveUrl: 'https://venkatesh-portfolio-two.vercel.app/',
   },
+  {
+  name: 'AI-Powered Lost and Found System',
+  status: 'Completed',
+  isMain: false,
+  description:
+    'AI-powered platform that helps users report lost and found items, automatically matches related reports using intelligent similarity analysis, and provides match results to help users recover lost belongings.',
+  workflowSteps: [
+    '1. User Registration / Login',
+    '2. Report Lost Item',
+    '3. Report Found Item',
+    '4. Item Details Analysis',
+    '5. AI Similarity Matching',
+    '6. Match Score Generation',
+    '7. Matching Results',
+    '8. Contact / Recovery',
+  ],
+  technologies: ['React.js', 'FastAPI', 'Python', 'SQLite', 'AI/ML'],
+  liveUrl: 'https://ai-powered-lost-and-found-frontend.vercel.app/',
+  githubUrl:
+    'https://github.com/VenkateshRachapothu/ai-powered-lost-and-found-system',
+},
 ];
 
 export const Projects = () => {

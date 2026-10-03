@@ -6,9 +6,9 @@ const EXPERIENCES = [
   {
     organization: 'Infosys Springboard',
     role: 'Backend Developer Intern',
-    period: 'Jul 2026 – Present',
-    status: 'In Progress',
-    statusType: 'in-progress',
+    period: 'Jul 2026 – Sep 2026',
+    status: 'Completed',
+    statusType: 'completed',
     description:
       'Working on an Enterprise Workflow Automation Platform focused on AI-agent coordination, multi-step workflows, decision automation, FastAPI, LangGraph, and LLM-based systems.',
     technologies: ['Python', 'FastAPI', 'LangGraph', 'LLMs', 'AI Agents'],
